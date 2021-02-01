@@ -8,11 +8,13 @@ const getRandomNumber = function getRandomIntInclusive(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-console.log(getRandomNumber(0, 10));
 
-const checkStringLength = function (string, maxLength) {
+alert(getRandomNumber(0, 10));
+
+const verifyStringLength = function (string, maxLength) {
   return string.length <= maxLength;
 }
-console.log(checkStringLength(text, COMMENT_LENGTH));
+
+alert(verifyStringLength(text, COMMENT_LENGTH));
 
 //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
