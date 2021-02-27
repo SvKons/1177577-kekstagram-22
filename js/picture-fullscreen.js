@@ -19,9 +19,11 @@ pictureList.addEventListener('click', (evt) => {
 const openPictureModal = (element) => {
   createFullScreenPicture(element.id);
   pictureModal.classList.remove('hidden');
+
   commentCount.classList.add('hidden');
   commentsLoader.classList.add('hidden');
   bodyElement.classList.add('modal-open');
+
   pictureModalClose.addEventListener('click', closePictureModal);
   document.addEventListener('keydown', onPopupEscKeydown);
 };
@@ -29,6 +31,7 @@ const openPictureModal = (element) => {
 const closePictureModal = () => {
   pictureModal.classList.add('hidden');
   bodyElement.classList.remove('modal-open');
+
   document.removeEventListener('keydown', onPopupEscKeydown);
 };
 

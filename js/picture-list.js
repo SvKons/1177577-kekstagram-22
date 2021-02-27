@@ -21,16 +21,20 @@ const createFullScreenPicture = (id) => {
   let currentPicture = getPublicPhotos.find(item => item.id === +id);
 
   const modalPicturePreview = document.querySelector('.big-picture__preview');
+
   modalPicturePreview.querySelector('.big-picture__img img').src = currentPicture.url;
   modalPicturePreview.querySelector('.likes-count').textContent = currentPicture.likes;
   modalPicturePreview.querySelector('.comments-count').textContent = currentPicture.comments.length;
   modalPicturePreview.querySelector('.social__caption').textContent = currentPicture.description;
+
   createComments(currentPicture);
 }
 
 const createComments = (picture) => {
   const commentTemplate = document.querySelector('#comment').content.querySelector('.social__comment');
+
   const commentListFragment = document.createDocumentFragment();
+
   picture.comments.forEach((item) => {
     const commentElement = commentTemplate.cloneNode(true);
 
