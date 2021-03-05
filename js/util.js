@@ -16,4 +16,12 @@ const verifyStringLength = (string, maxLength) => {
   return string.length <= maxLength;
 }
 
-export {getRandomNumber, verifyStringLength};
+const isEscEvent = (evt) => {
+  return (evt.key === 'Escape' || evt.key === 'Esc');
+};
+
+const isEnterEvent = (evt) => {
+  return evt.key === 'Enter';
+};
+
+export { getRandomNumber, verifyStringLength, isEscEvent, isEnterEvent };
